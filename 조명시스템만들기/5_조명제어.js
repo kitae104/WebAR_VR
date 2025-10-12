@@ -6,15 +6,15 @@ var createScene = function () {
 
     // ======== 카메라 설정 ========
     const camera = new BABYLON.ArcRotateCamera("cam",
-        BABYLON.Tools.ToRadians(-60),
-        BABYLON.Tools.ToRadians(75),
-        15,
+        0, // 정면을 보도록 alpha 값을 0으로 수정
+        BABYLON.Tools.ToRadians(80), // 약간 낮은 각도로 조정
+        18, // 조금 더 가깝게 조정
         new BABYLON.Vector3(0, 1.2, 0),
         scene
     );
     camera.attachControl(canvas, true);
     camera.lowerRadiusLimit = 5;
-    camera.upperRadiusLimit = 30;
+    camera.upperRadiusLimit = 40;
     camera.wheelPrecision = 50;
 
     // ======== 바닥 및 벽 생성 ========
