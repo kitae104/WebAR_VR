@@ -1,0 +1,1 @@
+var camera = new BABYLON.ArcRotateCamera("camera", -Math.PI / 2, Math.PI / 2.5, 10, new BABYLON.Vector3.Zero(), scene);
